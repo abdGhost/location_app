@@ -1,12 +1,17 @@
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
+
 class PlcaeLocation {
   final double latitude;
   final double longitude;
-  final String? address;
+  final String address;
 
-  PlcaeLocation(
-      {required this.latitude, required this.longitude, this.address});
+  PlcaeLocation({
+    @required this.latitude,
+    @required this.longitude,
+    this.address,
+  });
 }
 
 class Place {
@@ -16,9 +21,9 @@ class Place {
   final File image;
 
   Place({
-    required this.id,
-    required this.title,
-    required this.location,
-    required this.image,
+    @required this.id,
+    @required this.title,
+    this.location,
+    @required this.image,
   });
 }
